@@ -47,6 +47,7 @@ void WFSimModelIdealTwist::update(const double& dt)
 {
   updateRungeKutta(dt, input_);
 }
+
 Eigen::VectorXd WFSimModelIdealTwist::calcModel(const Eigen::VectorXd& state, const Eigen::VectorXd& input)
 {
   const double yaw = state(IDX::YAW);
@@ -92,6 +93,7 @@ void WFSimModelIdealSteer::update(const double& dt)
 {
   updateRungeKutta(dt, input_);
 }
+
 Eigen::VectorXd WFSimModelIdealSteer::calcModel(const Eigen::VectorXd& state, const Eigen::VectorXd& input)
 {
   const double yaw = state(IDX::YAW);
