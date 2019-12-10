@@ -43,6 +43,10 @@ double WFSimModelIdealTwist::getSteer()
 {
   return 0.0;
 };
+void WFSimModelIdealTwist::update(const double& dt)
+{
+  updateRungeKutta(dt, input_);
+}
 
 Eigen::VectorXd WFSimModelIdealTwist::calcModel(const Eigen::VectorXd& state, const Eigen::VectorXd& input)
 {
@@ -85,6 +89,10 @@ double WFSimModelIdealSteer::getSteer()
 {
   return input_(IDX_U::STEER_DES);
 };
+void WFSimModelIdealSteer::update(const double& dt)
+{
+  updateRungeKutta(dt, input_);
+}
 
 Eigen::VectorXd WFSimModelIdealSteer::calcModel(const Eigen::VectorXd& state, const Eigen::VectorXd& input)
 {
