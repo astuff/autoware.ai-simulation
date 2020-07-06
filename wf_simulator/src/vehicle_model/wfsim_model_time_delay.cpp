@@ -85,6 +85,7 @@ void WFSimModelTimeDelayTwist::update(const double& dt)
 
   updateRungeKutta(dt, delayed_input);
 };
+
 void WFSimModelTimeDelayTwist::initializeInputQueue(const double& dt)
 {
   size_t vx_input_queue_size = static_cast<size_t>(round(vx_delay_ / dt));
@@ -193,6 +194,7 @@ void WFSimModelTimeDelaySteer::update(const double& dt)
 
   updateRungeKutta(dt, delayed_input);
 };
+
 void WFSimModelTimeDelaySteer::initializeInputQueue(const double& dt)
 {
   size_t vx_input_queue_size = static_cast<size_t>(round(vx_delay_ / dt));
