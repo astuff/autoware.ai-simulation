@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+#include <algorithm>
 #include "wf_simulator/vehicle_model/wfsim_model_constant_acceleration.hpp"
 
 WFSimModelConstantAccelTwist::WFSimModelConstantAccelTwist(double vx_lim, double wz_lim, double vx_rate, double wz_rate)
@@ -22,7 +23,7 @@ WFSimModelConstantAccelTwist::WFSimModelConstantAccelTwist(double vx_lim, double
   , vx_lim_(vx_lim)
   , wz_lim_(wz_lim)
   , vx_rate_(vx_rate)
-  , wz_rate_(wz_rate){};
+  , wz_rate_(wz_rate) {}
 
 double WFSimModelConstantAccelTwist::getX()
 {
