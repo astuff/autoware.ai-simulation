@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+#include <algorithm>
 #include "wf_simulator/vehicle_model/wfsim_model_time_delay.hpp"
 
 /*
