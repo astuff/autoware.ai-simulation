@@ -17,7 +17,7 @@
 
 #include "wf_simulator/vehicle_model/wfsim_model_ideal.hpp"
 
-WFSimModelIdealTwist::WFSimModelIdealTwist() : WFSimModelInterface(3 /* dim x */, 2 /* dim u */){};
+WFSimModelIdealTwist::WFSimModelIdealTwist() : WFSimModelInterface(3 /* dim x */, 2 /* dim u */) {}
 
 double WFSimModelIdealTwist::getX()
 {
@@ -63,7 +63,7 @@ Eigen::VectorXd WFSimModelIdealTwist::calcModel(const Eigen::VectorXd& state, co
 };
 
 WFSimModelIdealSteer::WFSimModelIdealSteer(double wheelbase)
-  : WFSimModelInterface(3 /* dim x */, 2 /* dim u */), wheelbase_(wheelbase){};
+  : WFSimModelInterface(3 /* dim x */, 2 /* dim u */), wheelbase_(wheelbase) {}
 
 double WFSimModelIdealSteer::getX()
 {
